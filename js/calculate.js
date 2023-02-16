@@ -5,6 +5,10 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
     // const totalExpense = foodInputValue + rentInputValue + clothInputValue;
 
     const inputData = getInputData();
+    /* 
+     ##### Check input field
+    */
+
     if(isNaN(inputData.incomeInput) || inputData.incomeInput <= 0 ){
        return alert('Income : Please enter integer number')
     }
@@ -18,6 +22,11 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
        return alert('Clothes : Please enter integer  number')
     }
     const totalExpense = inputData.foodInputValue + inputData.rentInputValue + inputData.clothInputValue;
+    
+    /* 
+     ##### compare income & expense
+    */
+
     if(inputData.incomeInput < totalExpense){
         return alert('cut your coat according to your cloth ')
     }
@@ -33,6 +42,10 @@ document.getElementById('btn-save').addEventListener('click', function(){
     // const saveInput = getInputValueById('save-input');
 
     const inputData = getInputData();
+
+    /* 
+     ##### Check input field
+     */
     if(isNaN(inputData.saveInput) || inputData.saveInput <= 0){
         return alert('Save : Please enter integer number')
     }
@@ -43,7 +56,9 @@ document.getElementById('btn-save').addEventListener('click', function(){
     // const saveAmount = getElementTextById('save-amount');
 
     const elementText = getElementData()
-
+    /* 
+      ##### compare balance & saving
+    */
     if(elementText.balanceText <= elementText.saveAmountText){
         return alert('You do not have enough money for saving')
     }
