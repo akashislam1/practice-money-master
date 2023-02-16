@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dracula">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="my-6 bg-neutral w-2/5 mx-auto">
+        <h1 class="text-4xl text-center pt-5">Money Master💰</h1>
+        <div class="mt-3">
+            <h1 class="text-3xl text-center my-5">Income</h1>
+            <div class="text-center flex justify-center gap-3 items-center">
+                <p class="text-2xl">Income:</p>
+                <div>
+                    <input id="income-input" type="text" placeholder="10000"
+                        class="input input-sm input-bordered input-primary w-full max-w-xs" />
+                </div>
+            </div>
+        </div>
+        <div class=" text-center pb-8">
+            <h1 class="text-3xl text-center my-4">Expenses</h1>
+            <div class=" bg-neutral rounded-lg">
+                <div class="flex justify-center gap-6 mb-3">
+                    <div class="text-right ">
+                        <p class="text-2xl inline mr-8">Food:</p>
+                    </div>
+                    <div>
+                        <input id="food-input" type="text" placeholder="0"
+                            class="input input-sm input-bordered input-success w-full max-w-xs" />
+                    </div>
+                </div>
+                <div class="flex justify-center gap-6 mb-3">
+                    <div>
+                        <p class=" text-2xl inline mr-8">Rent :</p>
+                    </div>
+                    <div>
+                        <input id="rent-input" type="text" placeholder="0"
+                            class="input input-sm input-bordered input-success w-full max-w-xs" />
+                    </div>
+                </div>
+                <div class="flex justify-center mb-8">
+                    <div>
+                        <p class=" text-2xl inline mr-8 mb-3">Clothes:</p>
+                    </div>
+                    <div>
+                        <input id="cloth-input" type="text" placeholder="0"
+                            class="input input-sm input-bordered input-success w-full max-w-xs" />
+                    </div>
+                </div>
+            </div>
+            <button id="btn-calculate" class="btn bg-blue-600 px-8">Calculate</button>
+            <h3 class="text-2xl my-4">Total Expenses: <span id="total-expense">0</span></h3>
+            <h3 class="text-2xl my-4">Balance: <span id="balance">0</span></h3>
+            <div class="flex justify-center items-center gap-6 my-4">
+                <p class=" text-xl inline">Save</p>
+                <input id="save-input" type="text" placeholder="0%" class="input input-sm input-bordered input-success" />
+                <p>%</p>
+                <button id="btn-save" class="btn bg-blue-600 px-8">Save</button>
+            </div>
+            <h3 class="text-2xl my-4">Saving Amount: <span id="save-amount">0</span></h3>
+            <h3 class="text-2xl my-4">Remaining Balance: <span id="remaining-amount">0</span></h3>
+        </div>
+    </div>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/calculate.js"></script>
+</body>
+
+</html>
